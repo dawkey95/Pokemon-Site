@@ -1,0 +1,16 @@
+{
+  "name": "assignment-02-webapp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node assignment-02-webapp.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}

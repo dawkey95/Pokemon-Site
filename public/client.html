@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pokemon Fansite</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <script src="./js/client.js"></script>
+</head>
+
+<body>
+
+
+    <div class="jumbotron text-center py-2 mb-0">
+        <img class="img-fluid" src="./images/client/pokemon.png">
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
+        <a class="navbar-brand" href="#">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">TV Show</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Game Mechanics
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.pokemon.com">Official Website</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-2">
+
+                <h3>Game Mechanics</h3>
+
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pokemon</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Moves</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Abilities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Types</a>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+
+            <div class="col-lg-7">
+                <h1>Type chart</h1>
+                <p class="text-justify">This chart lets you know how effective an attacking move of a given type
+                    <em>(left)</em> is against a defending Pokemon of another type
+                    <em>(top)</em>. An
+                    <strong>X</strong> means "not very effective", while an
+                    <strong>O</strong> means "super effective"!</p>
+
+                <table class="table table-striped text-center table-responsive w-100 d-block d-sm-table">
+                    <thead id="type-chart-header">
+                        <!-- <tr>
+                            <th></th>
+                            <th>Fire</th>
+                            <th>Water</th>
+                            <th>Grass</th>
+                            <th>Electric</th>
+                            <th>Ice</th>
+                        </tr> -->
+                    </thead>
+                    <tbody id="type-chart-body">
+                        <!-- <tr>
+                            <th class="text-right">Fire</th>
+                            <td>X</td>
+                            <td>X</td>
+                            <td>O</td>
+                            <td></td>
+                            <td>O</td>
+                        </tr>
+                        <tr>
+                            <th class="text-right">Water</th>
+                            <td>O</td>
+                            <td>X</td>
+                            <td>X</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="text-right">Grass</th>
+                            <td>X</td>
+                            <td>O</td>
+                            <td>X</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="text-right">Electric</th>
+                            <td></td>
+                            <td>O</td>
+                            <td>X</td>
+                            <td>X</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="text-right">Ice</th>
+                            <td>X</td>
+                            <td>X</td>
+                            <td>O</td>
+                            <td></td>
+                            <td>X</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-lg-3">
+
+                <h4 class="text-center">Featured Pokémon</h4>
+                <div id="featured-pokemon-card" class="card">
+                    <img class="card-img-top p-1" src="./images/client/pikachu.png" alt="Pikachu">
+                    <div class="card-body">
+                        <h5 class="card-title">Pikachu</h5>
+                        <p class="card-text text-justify"><strong>Types: </strong>Electric</p>
+                        <button type="button" id="btn-more-info" class="btn btn-primary" data-toggle="modal"
+                            data-target="#detail-modal">More info</button>
+                        <button type="button" id="btn-randomize" class="btn btn-secondary">Randomize</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="detail-modal" tabindex="-1" role="dialog" aria-labelledby="detail-modal-title"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detail-modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex flex-column justify-content-start align-items-center">
+                        <img id="detail-image" class="d-block img-fluid">
+                        <p id="detail-types"></p>
+                        <p id="detail-description"></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

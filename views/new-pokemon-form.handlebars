@@ -1,0 +1,57 @@
+<div class="container">
+    <h2>New Poke'mon</h2>
+    <div class="card">
+        <div class="card-body">
+
+            <form action="./newPokemon" method="POST" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <label for="txtId">ID:</label>
+                    <input id="txtId" type="number" name="id" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="txtName">Name:</label>
+                    <input id="txtName" type="text" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <p>Types:</p>
+                    <label><input type="checkbox" name="types" value="Normal"> Normal</label>
+                    <label><input type="checkbox" name="types" value="Fire"> Fire</label>
+                    <label><input type="checkbox" name="types" value="Fighting"> Fighting</label>
+                    <label><input type="checkbox" name="types" value="Water"> Water</label>
+                    <label><input type="checkbox" name="types" value="Flying"> Flying</label>
+                    <label><input type="checkbox" name="types" value="Grass"> Grass</label>
+                    <label><input type="checkbox" name="types" value="Poison"> Poison</label>
+                    <label><input type="checkbox" name="types" value="Electric"> Electric</label>
+                    <label><input type="checkbox" name="types" value="Ground"> Ground</label>
+                    <label><input type="checkbox" name="types" value="Psychic"> Psychic</label>
+                    <label><input type="checkbox" name="types" value="Rock"> Rock</label>
+                    <label><input type="checkbox" name="types" value="Ice"> Ice</label>
+                    <label><input type="checkbox" name="types" value="Bug"> Bug</label>
+                    <label><input type="checkbox" name="types" value="Dragon"> Dragon</label>
+                    <label><input type="checkbox" name="types" value="Ghost"> Ghost</label>
+                    <label><input type="checkbox" name="types" value="Dark"> Dark</label>
+                    <label><input type="checkbox" name="types" value="Steel"> Steel</label>
+                    <label><input type="checkbox" name="types" value="Fairy"> Fairy</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="txtDescription">Description:</label>
+                    <textarea id="txtDescription" name="description" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="inpFile">Image:</label>
+                    <input id="inpFile" type="file" name="imageFile" accept=".png,.jpg,.jpeg,.bmp,.gif" required>
+                </div>
+
+                <div class="form-group align-start">
+                    <button type="submit">Submit</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
