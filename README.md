@@ -1,3 +1,5 @@
+THIS WAS MY UNIVERSITY ASSIGNMENT TO CREATE A FUNCTIONAL POKEMON WEBSITE
+
 # COMPSCI 719 Assignment One &ndash; Server-Side Pokémon
 This assignment has several tasks, which will initially see you building the *server-side* functionality for the client app you wrote in Assignment 01 (see the below screenshot for reference).
 
